@@ -11,6 +11,11 @@ import {getServerApiUrl} from './url-helper'
 
 const IS_WINDOWS = process.platform === 'win32'
 
+core.info(`=========================================`)
+core.info(`Platform: ${process.platform}`)
+core.info(`IS_WINDOWS: ${IS_WINDOWS? 'true': 'false'}`)
+core.info(`=========================================`)
+
 export async function downloadRepository(
   authToken: string,
   owner: string,

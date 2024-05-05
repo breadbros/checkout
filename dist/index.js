@@ -1559,6 +1559,10 @@ const toolCache = __importStar(__nccwpck_require__(7784));
 const uuid_1 = __nccwpck_require__(5840);
 const url_helper_1 = __nccwpck_require__(9437);
 const IS_WINDOWS = process.platform === 'win32';
+core.info(`=========================================`);
+core.info(`Platform: ${process.platform}`);
+core.info(`IS_WINDOWS: ${IS_WINDOWS ? 'true' : 'false'}`);
+core.info(`=========================================`);
 function downloadRepository(authToken, owner, repo, ref, commit, repositoryPath, baseUrl) {
     return __awaiter(this, void 0, void 0, function* () {
         // Determine the default branch
