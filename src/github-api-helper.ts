@@ -40,7 +40,7 @@ export async function downloadRepository(
   // Write archive to disk
   core.info('Writing archive to disk')
   const uniqueId = uuid().substring(0, 7) // Truncate to the first 7 characters
-  const archivePath = path.join(repositoryPath, `${uniqueId}.tar.gz`)
+  const archivePath = path.join(repositoryPath, `${uniqueId}.${IS_WINDOWS? 'zip': 'tar.gz'}`)
   await fs.promises.writeFile(archivePath, archiveData)
   archiveData = Buffer.from('') // Free memory
 
